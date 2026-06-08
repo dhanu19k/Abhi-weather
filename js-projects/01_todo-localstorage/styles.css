@@ -1,0 +1,128 @@
+/* styles.css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, Arial, sans-serif;
+  background: radial-gradient(circle at top, #2d2a42 0%, #121214 55%);
+  color: #f4f4f8;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  width: min(100%, 420px);
+  background-color: rgba(20, 20, 28, 0.98);
+  padding: 28px;
+  border-radius: 24px;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 24px;
+  font-size: clamp(1.8rem, 2.2vw, 2.4rem);
+  letter-spacing: 0.02em;
+}
+
+.input-container {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+input[type="text"] {
+  flex: 1;
+  padding: 14px 16px;
+  background-color: #252538;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  color: #f4f4f8;
+  outline: none;
+  font-size: 0.98rem;
+}
+
+input[type="text"]::placeholder {
+  color: rgba(244, 244, 248, 0.55);
+}
+
+input[type="text"]:focus {
+  border-color: #8c6cff;
+  box-shadow: 0 0 0 4px rgba(140, 108, 255, 0.12);
+}
+
+button {
+  padding: 14px 18px;
+  background-color: #6d5cff;
+  border: none;
+  border-radius: 14px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+  font-weight: 600;
+  min-width: 108px;
+}
+
+button:hover,
+button:focus-visible {
+  background-color: #4f41ff;
+  transform: translateY(-1px);
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  background-color: #24243a;
+  padding: 14px 16px;
+  margin-bottom: 12px;
+  border-radius: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+li.completed {
+  text-decoration: line-through;
+  opacity: 0.65;
+}
+
+li button {
+  background-color: #f44336;
+  color: #ffffff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+li button:hover {
+  background-color: #d32f2f;
+}
+
+@media (max-width: 500px) {
+  .container {
+    padding: 20px;
+  }
+
+  .input-container {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}

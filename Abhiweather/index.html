@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <div class="scene">
+        <div class="sun"></div>
+        <div class="cloud cloud-1"></div>
+        <div class="cloud cloud-2"></div>
+        <div class="cloud cloud-3"></div>
+        <div class="balloon"></div>
+      </div>
+
+      <main class="weather-card">
+        <div class="search-panel">
+          <div class="search-input">
+            <span class="search-icon">🔎</span>
+            <input type="text" id="city-input" placeholder="Delhi" aria-label="City name" />
+          </div>
+          <button id="get-weather-btn">Search</button>
+        </div>
+
+        <section id="weather-result" class="weather-result hidden">
+          <div class="location-row">
+            <span class="location-pin">📍</span>
+            <h2 id="city-name">Delhi, IN</h2>
+          </div>
+
+          <div class="weather-icon">
+            <img id="weather-icon" src="" alt="Weather icon" />
+          </div>
+
+          <div class="temperature-row">
+            <strong id="temperature">0°C</strong>
+            <span id="description">clear sky</span>
+          </div>
+
+          <div class="stats-grid">
+            <div class="stat">
+              <span class="stat-icon">💧</span>
+              <div>
+                <p>Humidity</p>
+                <strong id="humidity">0%</strong>
+              </div>
+            </div>
+            <div class="stat">
+              <span class="stat-icon">🍃</span>
+              <div>
+                <p>Wind</p>
+                <strong id="wind-speed">0 km/h</strong>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <p id="error-message" class="error-message hidden">City not found. Please try again.</p>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
